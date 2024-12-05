@@ -416,9 +416,11 @@ all_metrics_calc = function(df, obs, pred, group){
     metrics = df %>%
         group_by(!!group) %>%
         reframe(n = length(!!pred),
-                obs_mean = mean(!!obs),
-                pred_mean = mean(!!pred),
-                MeanBias = mean(!!obs - !!pred),
+                Obs_NA = sum(is.na(!!obs)),
+                Pred_NA = sum(is.na(!!pred)),
+                obs_mean = mean(!!obs, na.rm=TRUE),
+                pred_mean = mean(!!pred, na.rm=TRUE),
+                MeanBias = mean(!!obs - !!pred, na.rm=TRUE),
                 MSEP = msep(!!obs, !!pred),
                 RMSE = rmse(!!obs, !!pred),
                 MSEP_bias = msep_bias(!!obs, !!pred),
