@@ -1,0 +1,51 @@
+Package: ModelEvaluation
+Type: Package
+Title: Model evaluation: the misuse of statistical techniques when evaluating observations versus predictions
+Version: 0.1.0
+Authors@R: 
+    c(
+      person(given = "Malcolm", family = "McPhee", 
+             affiliation = "NSW Department of Primary Industries, Livestock Industries Centre, University of New England, Trevenna Road, Armidale, NSW, 2351, Australia", 
+             email = "your_email@example.com", role = c("aut", "cre")),
+      person(given = "Jonathan", family = "Richetti", 
+             affiliation = "CSIRO, 147 Underwood Av, Floreat, Perth, WA, 6014, Australia", 
+             role = "aut"),
+      person(given = "Barry", family = "Croke", 
+             affiliation = "Mathematical Sciences Institute and Fenner School of Environmental and Society, The Australian National University, Australia", 
+             role = "aut"),
+      person(given = "Brad", family = "Walmsley", 
+             affiliation = c("NSW Department of Primary Industries, Livestock Industries Centre, University of New England, Trevenna Road, Armidale, NSW, 2351, Australia",
+                             "Animal Genetics and Breeding Unit (AGBU), University of New England, Armidale, NSW, 2351, Australia"), 
+             role = "aut")
+    )
+Maintainer: Jonathan Richetti <jonathan.richetti@csiro.au>
+Description: Model evaluation: the misuse of statistical techniques when evaluating observations versus predictions
+License: GPL + file LICENSE
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/JRichetti/model_evaluation
+BugReports: https://github.com/JRichetti/model_evaluation/issues
+Imports:
+   settings,
+   httr2,
+   rmarkdown,
+   utils,
+   jsonlite,
+   bookdown,
+   stringr,
+   stringi,
+   htmlwidgets,
+   rvest,
+   knitr,
+   base64enc,
+   htmltools,
+   grDevices
+RoxygenNote: 7.3.1
+Suggests: 
+    leaflet,
+    dplyr,
+    testthat (>= 3.0.0),
+    processx,
+    ggplot2,
+    grid
+VignetteBuilder: knitr
